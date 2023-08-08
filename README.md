@@ -16,3 +16,5 @@ In this project i am using:
  * Filtering menu: Responsive menu that allows users to filter the displaye products on different criteria such as brand, price, color.For the implementation is used custom hook and Redux Toolkit.
  * Products grid: Contains a set of product tiles positioned in a grid structure.The data comes from json and for the particular category the data is filterd with the help of useParams from React Router.
  * Product counter: Showing how many products are currently displayed in the product grid (x out of y).Implemented with React hooks.
+ * Cart alert: Alert for succesfully added items in the cart. This functionality is implementet with custom hook, modal, Redux Toolkit.
+ * *Products header:Sticky header so the user can always sort and filter the products without the need to sroll to the top.
