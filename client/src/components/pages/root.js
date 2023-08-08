@@ -6,10 +6,22 @@ import Filter from "./shopPage/filter";
 import Footer from "../footer/footer";
 import { useSelector } from "react-redux";
 import CartAlert from "../cartAlert/cartAlert";
+import { useEffect } from "react";
 
 const Root = () => {
   const { show, showAlert, toggleAlertModal, toggleModal } = useModal();
   const screenWidth = useSelector((state) => state.screenWidth.screenWidth);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (showAlert) {
+        toggleAlertModal();
+      }
+    }, 2000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [showAlert, toggleAlertModal]);
   return (
     <>
       {showAlert && <CartAlert onClose={toggleAlertModal} />}

@@ -1,29 +1,17 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import CartIcon from "../../icons/cartIcon";
 import classes from "./productCard.module.css";
 import { cartActions } from "../../store/cartSlice";
-import { useEffect } from "react";
 import { useModal } from "../../../hooks/useModal";
 const ProductCard = (props) => {
   const dispatch = useDispatch();
-  const { showAlert, toggleAlertModal } = useModal();
+  const { toggleAlertModal } = useModal();
   const addItem = () => {
     dispatch(
       cartActions.addProduct({ image: props.image, title: props.title })
     );
     toggleAlertModal();
   };
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      if (showAlert) {
-        toggleAlertModal();
-      }
-    }, 2000);
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [showAlert, toggleAlertModal]);
 
   return (
     <div className={`${classes.card} ${classes.stacked}`}>
