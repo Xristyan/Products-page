@@ -1,0 +1,28 @@
+.cartAlert {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin: 0;
+  position: relative;
+}
+.cartAlert button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+}
+.cartAlert p {
+  color: rgb(160, 253, 22);
+}
+.itemContainer {
+  display: flex;
+  align-items: center;
+}
+.itemContainer img {
+  width: 4rem;
+  height: 4rem;
+}
+.itemContainer span {
+  margin-left: 1rem;
+}

@@ -1,0 +1,42 @@
+.shopContainer {
+  background-color: rgb(255, 255, 255);
+  max-width: 90rem;
+  margin: 0 auto 5rem auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 1rem;
+  gap: 0.5rem;
+}
+.productsContainer {
+  flex-grow: 1;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.loadBtn {
+  margin: 2rem auto;
+  background-color: #242424;
+  color: white;
+  font-size: 1.7rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+.loadBtn:hover {
+  background-color: #575656;
+}
+.loadBtn:disabled,
+.loadBtn:disabled:active,
+.loadBtn:disabled:hover {
+  background-color: #ccc;
+  color: #3f3f3f;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+.emptyMessage {
+  text-align: center;
+}

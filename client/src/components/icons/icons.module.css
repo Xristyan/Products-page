@@ -1,0 +1,12 @@
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+.icon:hover {
+  color: orange;
+  cursor: pointer;
+}
+.cartIcon {
+  width: 1.7rem;
+  height: 1.7rem;
+}

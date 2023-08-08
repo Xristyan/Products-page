@@ -1,0 +1,38 @@
+.filterContainer {
+  position: sticky;
+  top: 6rem;
+  min-width: 13rem;
+  height: 95vh;
+  overflow: auto;
+  border: 5px solid white;
+  background-color: #242424;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: sans-serif;
+}
+.filterContainer::-webkit-scrollbar {
+  width: 8px;
+}
+.filterContainer::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 4px;
+}
+.filterSection {
+  color: white;
+  border-bottom: 1px solid white;
+}
+.filterSection h2 {
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+}
+.filterSection h2 span {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  .filterContainer {
+    height: 80vh;
+  }
+}
